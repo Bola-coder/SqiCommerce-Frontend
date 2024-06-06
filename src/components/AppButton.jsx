@@ -6,6 +6,7 @@ const AppButton = ({
   useBorder,
   handleClick,
   type,
+  disabled,
 }) => {
   return (
     <button
@@ -13,10 +14,11 @@ const AppButton = ({
       onClick={handleClick}
       style={{
         color: textColor ? textColor : "black",
-        backgroundColor: bgColor ? bgColor : "white",
+        backgroundColor: disabled ? "grey" : bgColor ? bgColor : "white",
         border: useBorder ? "1px solid black" : "none",
         ...styles.button,
       }}
+      disabled={disabled}
     >
       {text}
     </button>

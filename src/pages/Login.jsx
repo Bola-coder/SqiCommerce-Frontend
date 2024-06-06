@@ -6,7 +6,7 @@ import { useAuth } from "../contexts/AuthContext";
 import UseShowPassword from "../hooks/UseShowPassword";
 
 const Login = () => {
-  const { login } = useAuth();
+  const { login, loading } = useAuth();
   const { showPassword, handleShowPassword } = UseShowPassword();
 
   const formik = useFormik({
@@ -90,6 +90,7 @@ const Login = () => {
             textColor={"#FFF"}
             handleClick={formik.handleSubmit}
             type={"submit"}
+            disabled={loading}
           />
         </div>
       </div>

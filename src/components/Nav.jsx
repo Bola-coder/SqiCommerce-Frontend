@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import AppButton from "./AppButton";
 import { useAuth } from "../contexts/AuthContext";
 const Nav = () => {
@@ -17,7 +17,7 @@ const Nav = () => {
       </div>
       <div className="flex justify-evenly items-center basis-3/6">
         <p className="p-2 text-neutral-500 font-semibold cursor-pointer">
-          Create
+          <Link to={"/create-product"}>Create</Link>
         </p>
         <p className="p-2 text-neutral-500 font-semibold cursor-pointer">
           About
@@ -28,7 +28,7 @@ const Nav = () => {
       </div>
       {token ? (
         <div className="flex justify-between items-center basis-1/6">
-          <p>
+          <p className="text-[10px]">
             {user?.firstname} {user?.lastname}
           </p>
           <AppButton
