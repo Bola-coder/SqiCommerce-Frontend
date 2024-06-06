@@ -32,3 +32,10 @@ function App() {
 }
 
 export default App;
+
+// Assignment
+/*
+1. Work on uploading profile imae on both the backend and the frontend
+2. Work on the product detail page
+3. Work on 
+*/
